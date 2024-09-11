@@ -1,0 +1,159 @@
+function total(){
+    console.log("i am add funtion");
+}
+undefined
+total(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+VM155:2 i am add funtion
+undefined
+console.dir(add)
+VM318:1 Uncaught ReferenceError: add is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM318:1
+console.dir(total)
+VM349:1 ƒ total()arguments: nullcaller: nulllength: 0name: "total"prototype: {}[[FunctionLocation]]: VM155:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function total(){
+    console.log("i am add funtion",arguments);
+}
+undefined
+total(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+VM413:2 i am add funtion Arguments(14) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+console.dir(total)
+VM429:1 ƒ total()arguments: nullcaller: nulllength: 0name: "total"prototype: {}[[FunctionLocation]]: VM413:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function total(x,y){
+    console.log("i am add funtion",arguments);
+}
+undefined
+total(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+VM438:2 i am add funtion Arguments(14) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+console.dir(total)
+VM452:1 ƒ total(x,y)arguments: nullcaller: nulllength: 2name: "total"prototype: {}[[FunctionLocation]]: VM438:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+console.dir(total(10,20))
+VM438:2 i am add funtion Arguments(2) [10, 20, callee: ƒ, Symbol(Symbol.iterator): ƒ]0: 101: 20callee: ƒ total(x,y)length: 2Symbol(Symbol.iterator): ƒ values()[[Prototype]]: Object
+VM480:1 undefined
+undefined
+function total(){
+    var sum=0;
+    console.log("i am add funtion",arguments);
+    for(var i=0;i<arguments.length;i++){
+        sum+=arguments[i];
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,6,7,8,9,10,11,12,13,14);
+VM622:3 i am add funtion Arguments(14) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+105
+var b= parseInt('1')
+undefined
+b
+1
+typeof b
+'number'
+var b= parseInt('priya')
+undefined
+b
+NaN
+typeof b
+'number'
+function total(){
+    var sum=0;
+    console.log("i am add funtion",arguments);
+    for(var i=0;i<arguments.length;i++){
+        sum+=parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6");
+VM813:3 i am add funtion Arguments(6) [1, 2, 3, 4, 5, '6', callee: ƒ, Symbol(Symbol.iterator): ƒ]
+21
+isNaN(100)
+false
+isNaN(NaN)
+true
+isNaN("priya")
+true
+isNaN("0")
+false
+function total(){
+    var sum=0;
+    console.log("i am add funtion",arguments);
+    for(var i=0;i<arguments.length;i++){
+        sum= sum+  isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four');
+VM1001:3 i am add funtion Arguments(7) [1, 2, 3, 4, 5, '6', 'four', callee: ƒ, Symbol(Symbol.iterator): ƒ]
+0
+function total(){
+    var sum=0;
+    console.log("i am add funtion",arguments);
+    for(var i=0;i<arguments.length;i++){
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four');
+VM1036:3 i am add funtion Arguments(7) [1, 2, 3, 4, 5, '6', 'four', callee: ƒ, Symbol(Symbol.iterator): ƒ]
+21
+typeof total
+'function'
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return 2;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two);
+VM1036:3 i am add funtion Arguments(9) [1, 2, 3, 4, 5, '6', 'four', ƒ, ƒ, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+21
+parseInt(one)
+NaN
+function total(){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two);
+24
+isFinite(100000000)
+true
+isFinite('100000000')
+true
+isFinite('dfhwg')
+false
+isFinite('100/0')
+false
+isFinite(100/0)
+false
+isFinite(NaN)
+false
+window
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+total()
+0
+window.total()
+0
+window.isFinite()
+false
+Number.isFinite('09787')
+false
+Number.isFinite(9796)
+true

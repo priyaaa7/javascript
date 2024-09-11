@@ -1,0 +1,237 @@
+var a =100;
+undefined
+a="priya"
+'priya'
+var b;
+undefined
+b
+undefined
+typeof b
+'undefined'
+b=100
+100
+typeof b
+'number'
+b="priya
+VM190:1 Uncaught SyntaxError: Invalid or unexpected token
+b="priya"
+'priya'
+typeof b
+'string'
+b='sharma'
+'sharma'
+typeof b
+'string'
+b=`i am priya , and value of a is ${a}`
+'i am priya , and value of a is priya'
+var a=100;
+undefined
+b=200
+200
+var c=400;
+undefined
+console.log("a is ",a,"b is ",b ,"c is ",c)
+VM496:1 a is  100 b is  200 c is  400
+undefined
+console.log(`a is ${a} b is ${b} c is ${c}`)
+VM558:1 a is 100 b is 200 c is 400
+undefined
+a =true
+true
+typeof a
+'boolean'
+Number.MAX_SAFE_INTEGER
+9007199254740991
+a=9007199254740991
+9007199254740991
+a++
+9007199254740991
+a++
+9007199254740992
+a++
+9007199254740992
+a++
+9007199254740992
+a++
+9007199254740992
+a=9007199254740991n
+9007199254740991n
+typeof a
+'bigint'
+a++
+9007199254740991n
+a++
+9007199254740992n
+a++
+9007199254740993n
+a++
+9007199254740994n
+a++
+9007199254740995n
+a++
+9007199254740996n
+a++
+9007199254740997n
+a+100
+VM785:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:2
+(anonymous) @ VM785:1
+true+100
+101
+100-true
+99
+true + true
+2
+true - true
+0
+var arr=[10,20,30,40,50,56]
+undefined
+typeof arr
+'object'
+var obj1={name:"priya",lastname:"sharma"}
+undefined
+typeof obj1
+'object'
+arr.length
+6
+obj1.name
+'priya'
+arr instanceof array;
+VM1114:1 Uncaught ReferenceError: array is not defined
+    at <anonymous>:1:16
+(anonymous) @ VM1114:1
+arr instanceof Array;
+true
+typeof Array
+'function'
+console.dir(Array)
+VM1207:1 ƒ Array()from: ƒ from()fromAsync: ƒ fromAsync()isArray: ƒ isArray()length: 1name: "Array"of: ƒ of()prototype: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: ObjectSymbol(Symbol.species): ƒ Array()Symbol(Symbol.species): ƒ Array()arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]
+undefined
+obj1 instanceof Array
+false
+obj1 instance Object
+VM1311:1 Uncaught SyntaxError: Unexpected identifier 'instance'
+obj1 instanceof Object
+true
+arr instanceof Object
+true
+var a=1000;
+undefined
+var b =a;
+undefined
+b
+1000
+a++;
+1000
+a
+1001
+b
+1000
+b++
+1000
+b
+1001
+b++
+1001
+b
+1002
+a
+1001
+console.dir(Array);
+VM1624:1 ƒ Array()from: ƒ from()fromAsync: ƒ fromAsync()isArray: ƒ isArray()length: 1name: "isArray"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]length: 1name: "Array"of: ƒ of()prototype: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: ObjectSymbol(Symbol.species): ƒ Array()Symbol(Symbol.species): ƒ Array()arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]
+undefined
+var arr=[1,32,11,34,8,67,85,12,45,75,10,1,32,1,10,8]
+undefined
+arr.length
+16
+var arr1=[10,20,30,40]
+undefined
+var arr2=arr1
+undefined
+arr1.pop()
+40
+arr1;
+(3) [10, 20, 30]
+arr2;
+(3) [10, 20, 30]
+arr2.push(11111)
+4
+arr2
+(4) [10, 20, 30, 11111]
+arr1
+(4) [10, 20, 30, 11111]
+obj1
+{name: 'priya', lastname: 'sharma'}
+var obj2=obj1
+undefined
+obj1.department="IT"
+'IT'
+obj1
+{name: 'priya', lastname: 'sharma', department: 'IT'}
+obj2
+{name: 'priya', lastname: 'sharma', department: 'IT'}
+obj2="priya"
+'priya'
+typeof obj2
+'string'
+obj1
+{name: 'priya', lastname: 'sharma', department: 'IT'}department: "IT"lastname: "sharma"name: "priya"[[Prototype]]: Object
+typeof obj1
+'object'
+obj1=null
+null
+typeof obj1
+'object'
+    arr.length
+16
+var obj1={name:"priya",lastname:"sharma"}
+undefined
+obj1.name
+'priya'
+var a=100
+undefined
+typeof a
+'number'
+a="priya"
+'priya'
+a.toUpperCase();
+'PRIYA'
+var h=new String("priya")
+undefined
+h
+String {'priya'}0: "p"1: "r"2: "i"3: "y"4: "a"length: 5[[Prototype]]: String[[PrimitiveValue]]: "priya"
+typeof h
+'object'
+h.toUp
+undefined
+h.toUpperCase()
+'PRIYA'
+a=100
+100
+var a = new Number(1000)
+undefined
+var b= new Boolean(true)
+undefined
+b
+Boolean {true}
+undefined == null
+true
+undefined === null
+false
+10=="10"
+true
+10==="10"
+false
+function add(){// function definition style
+    //code 
+    console.log("i am add fn")
+}
+undefined
+add();
+VM3014:3 i am add fn
+undefined
+add
+ƒ add(){// function definition style
+    //code 
+    console.log("i am add fn")
+}
