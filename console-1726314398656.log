@@ -1,0 +1,178 @@
+function total(){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+function one(){
+    return 1;
+}
+undefined
+function two(){
+    return 2;
+}
+undefined
+console.dir(total)
+VM186:1 ƒ total()arguments: nullcaller: nulllength: 0name: "total"prototype: {}[[FunctionLocation]]: VM51:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function total(x,y,z){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+console.dir(total)
+VM202:1 ƒ total(x,y,z)arguments: nullcaller: nulllength: 3name: "total"prototype: {}[[FunctionLocation]]: VM197:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+    console.log(arguments);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM346:2 Arguments(7) [1, 2, 3, 4, 5, 6, 'priya', callee: ƒ, Symbol(Symbol.iterator): ƒ]0: 11: 22: 33: 44: 55: 66: "priya"callee: ƒ add()length: 7Symbol(Symbol.iterator): ƒ values()[[Prototype]]: Object
+undefined
+parseInt("4")
+4
+parseInt("priya")
+NaN
+var arr=[10,20,30,3000,5000,6000,3000,4000,5000,3000]
+undefined
+function add(x,y,...z){
+    console.log(`x is ${x} y is ${y} z is ${z}`);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM660:2 x is 1 y is 2 z is 3,4,5,6,priya
+undefined
+function add(...z){
+    console.log(` z is ${z}`);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM689:2  z is 1,2,3,4,5,6,priya
+undefined
+function add(){
+    console.log(typeof arguments);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM721:2 object
+undefined
+function add(){
+    console.log( arguments instanceof Array);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM817:2 false
+undefined
+function add(...z){
+    console.log(` z is ${z}`);
+}
+undefined
+function add(...z){
+    console.log(` z is ${z} `,typeof z);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM886:2  z is 1,2,3,4,5,6,priya  object
+undefined
+function add(...z){
+    console.log(` z is ${z} `,z instanceof Array);
+}
+undefined
+add(1,2,3,4,5,6,'priya')
+VM989:2  z is 1,2,3,4,5,6,priya  true
+undefined
+function add(...x,...z){
+    console.log(` z is ${z} `,z instanceof Array);
+}
+VM1002:1 Uncaught SyntaxError: Rest parameter must be last formal parameter
+function total(...z){
+    var sum=0;
+ 
+    for(var i=0;i<z.length;i++){
+        if(typeof z[i]==='function'){
+            z[i]=z[i]();
+        }
+        sum= sum+(isNaN(parseInt(z[i]))?0:parseInt(z[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two);
+24
+function total(x,y,z){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+    if (arguments[i] instanceof Array){
+            for(var j=0;j<arguments[i][j].length;j++){
+                  sum= sum+(isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+        continue;
+    }
+        
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two,[1,2,3]);
+24
+function total(){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+    if (arguments[i] instanceof Array){
+            for(var j=0;j<arguments.length;j++){
+                  sum= sum+(isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+        continue;
+    }
+        
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two,[1,2,3]);
+30
+function total(){
+    var sum=0;
+ 
+    for(var i=0;i<arguments.length;i++){
+    if (arguments[i] instanceof Array){
+            for(var j=0;j<arguments[i].length;j++){
+                  sum= sum+(isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]));
+            }
+        continue;
+    }
+        
+        if(typeof arguments[i]==='function'){
+            arguments[i]=arguments[i]();
+        }
+        sum= sum+(isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+total(1,2,3,4,5,"6",'four',one,two,[1,2,3]);
+30

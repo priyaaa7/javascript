@@ -1,0 +1,198 @@
+var arr1=[10,20,30,40,50]
+undefined
+var arr2=arr1
+undefined
+arr2
+(5) [10, 20, 30, 40, 50]
+arr1.pop();
+50
+arr1
+(4) [10, 20, 30, 40]
+arr2
+(4) [10, 20, 30, 40]
+var arr2=...arr1;
+VM214:1 Uncaught SyntaxError: Unexpected token '...'
+var arr2=[...arr1];
+undefined
+arr2
+(4) [10, 20, 30, 40]
+arr1.push(11111)
+5
+arr1
+(5) [10, 20, 30, 40, 11111]
+arr2
+(4) [10, 20, 30, 40]
+var obj1={name:'priya',id:1009}
+undefined
+var obj2={...obj1}
+undefined
+obj2
+{name: 'priya', id: 1009}
+obj2.department="it"
+'it'
+obj2
+{name: 'priya', id: 1009, department: 'it'}
+obj1
+{name: 'priya', id: 1009}
+obj1
+{name: 'priya', id: 1009}
+var obj3={name: 'priya', id: 1009,department:"IT",hra:472,ta:9867236,city:'delhi'}
+undefined
+var obj4={address:'xyz',phoneno:987875745,department:"business"}
+undefined
+var obj5={...obj3,...obj4}
+undefined
+obj5
+{name: 'priya', id: 1009, department: 'business', hra: 472, ta: 9867236, …}address: "xyz"city: "delhi"department: "business"hra: 472id: 1009name: "priya"phoneno: 987875745ta: 9867236[[Prototype]]: Object
+arr
+VM798:1 Uncaught ReferenceError: arr is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM798:1
+arr1
+(5) [10, 20, 30, 40, 11111]
+arr1=[10,20,30,[1,2,3,4,5],40,50]
+(6) [10, 20, 30, Array(5), 40, 50]0: 101: 202: 303: (5) [1, 2, 3, 4, 5]4: 405: 50length: 6[[Prototype]]: Array(0)
+var arr2=[...arr1]
+undefined
+arr2
+(6) [10, 20, 30, Array(5), 40, 50]0: 101: 202: 303: (5) [1, 2, 3, 4, 5]4: 405: 50length: 6[[Prototype]]: Array(0)
+arr2[3].pop();
+5
+arr2
+(6) [10, 20, 30, Array(4), 40, 50]0: 101: 202: 303: (4) [1, 2, 3, 4]4: 405: 50length: 6[[Prototype]]: Array(0)
+arr1
+(6) [10, 20, 30, Array(4), 40, 50]0: 101: 202: 303: (4) [1, 2, 3, 4]4: 405: 50length: 6[[Prototype]]: Array(0)
+arr=[4,5,6,7]
+(4) [4, 5, 6, 7]
+obj={name:'',id:32}
+{name: '', id: 32}
+var c =arr[0]
+undefined
+c
+4
+var [x,y]=arr
+undefined
+x
+4
+y
+5
+var [x,,,y]=arr
+undefined
+x
+4
+y
+7
+obj
+{name: '', id: 32}
+obj1
+{name: 'priya', id: 1009}
+var v =obj1.id
+undefined
+v
+1009
+var {name,id}=obj1;
+undefined
+name
+'priya'
+id
+1009
+var kohli={id:111,name:'virat',50:100,100:20};
+undefined
+kohli.50
+VM1551:1 Uncaught SyntaxError: Unexpected number
+var {50}=kohli;
+VM1580:1 Uncaught SyntaxError: Unexpected number
+kohli[50];
+100
+var num=100;
+undefined
+kohli[num];
+20
+for(var i=1;i<10;i++){
+    console.log(i)
+}
+VM1758:2 1
+VM1758:2 2
+VM1758:2 3
+VM1758:2 4
+VM1758:2 5
+VM1758:2 6
+VM1758:2 7
+VM1758:2 8
+VM1758:2 9
+undefined
+arr
+(4) [4, 5, 6, 7]
+obj1
+{name: 'priya', id: 1009}
+for(var k in arr){
+    console.log(`k is ${k} arr of i is ${arr[i]}`)
+}
+
+VM1901:2 k is 0 arr of i is undefined
+VM1901:2 k is 1 arr of i is undefined
+VM1901:2 k is 2 arr of i is undefined
+VM1901:2 k is 3 arr of i is undefined
+undefined
+for(var k in obj1){
+    console.log(`k is ${k} obj of i is ${obj[i]}`)
+}
+
+VM1925:2 k is name obj of i is undefined
+VM1925:2 k is id obj of i is undefined
+undefined
+for(var k in arr){
+    console.log(`k is ${k} arr of i is ${arr[k]}`)
+}
+
+VM2009:2 k is 0 arr of i is 4
+VM2009:2 k is 1 arr of i is 5
+VM2009:2 k is 2 arr of i is 6
+VM2009:2 k is 3 arr of i is 7
+undefined
+for(var k in obj1){
+    console.log(`k is ${k} obj of i is ${obj[k]}`)
+}
+
+VM2016:2 k is name obj of i is 
+VM2016:2 k is id obj of i is 32
+undefined
+for(var k in obj1){
+    console.log(`k is ${k} obj of i is ${obj1[k]}`)
+}
+
+VM2021:2 k is name obj of i is priya
+VM2021:2 k is id obj of i is 1009
+undefined
+for(var k of arr){
+    console.log(`k is ${k} arr of k is ${arr[k]}`)
+}
+
+VM2052:2 k is 4 arr of k is undefined
+VM2052:2 k is 5 arr of k is undefined
+VM2052:2 k is 6 arr of k is undefined
+VM2052:2 k is 7 arr of k is undefined
+undefined
+arr.color='red'
+'red'
+arr
+(4) [4, 5, 6, 7, color: 'red']0: 41: 52: 63: 7color: "red"length: 4[[Prototype]]: Array(0)
+for(var k of arr){
+    console.log(`k is ${k} arr of k is ${arr[k]}`)
+}
+
+VM2101:2 k is 4 arr of k is undefined
+VM2101:2 k is 5 arr of k is undefined
+VM2101:2 k is 6 arr of k is undefined
+VM2101:2 k is 7 arr of k is undefined
+undefined
+for(var k in arr){
+    console.log(`k is ${k} arr of k is ${arr[k]}`)
+}
+
+VM2109:2 k is 0 arr of k is 4
+VM2109:2 k is 1 arr of k is 5
+VM2109:2 k is 2 arr of k is 6
+VM2109:2 k is 3 arr of k is 7
+VM2109:2 k is color arr of k is red
+undefined

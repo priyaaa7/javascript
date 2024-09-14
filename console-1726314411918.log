@@ -1,0 +1,199 @@
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    var a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+undefined
+add()
+VM167:2 at start  undefined
+VM167:5 inside if 10
+VM167:7 at end  10
+undefined
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    var a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    conosole.log("outside fn ",a)
+VM221:10 Uncaught ReferenceError: conosole is not defined
+    at <anonymous>:10:5
+(anonymous) @ VM221:10
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    var a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    console.log("outside fn ",a)
+VM224:10 Uncaught ReferenceError: a is not defined
+    at <anonymous>:10:31
+(anonymous) @ VM224:10
+var b=1111
+undefined
+b
+1111
+window.b
+1111
+console.log("value of c is ",c);
+var c=100000
+VM409:1 value of c is  undefined
+undefined
+window
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    var a=10;
+    console.log("inside if",a)
+    var a=1000;
+}
+    var a=2000
+      console.log("at end ",a)  
+}
+
+  
+undefined
+add()
+VM472:2 at start  undefined
+VM472:5 inside if 10
+VM472:9 at end  2000
+undefined
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    let a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    console.log("outside fn ",a)
+VM515:10 Uncaught ReferenceError: a is not defined
+    at <anonymous>:10:31
+(anonymous) @ VM515:10
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+    let a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    console.log("outside fn ",a)
+VM518:10 Uncaught ReferenceError: a is not defined
+    at <anonymous>:10:31
+(anonymous) @ VM518:10
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+    let a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+   
+undefined
+add()
+VM524:5 inside if 10
+VM524:7 Uncaught ReferenceError: a is not defined
+    at add (<anonymous>:7:29)
+    at <anonymous>:1:1
+add @ VM524:7
+(anonymous) @ VM542:1
+function add(){
+        console.log("at start ",a)
+if(10>2){
+    let a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    
+undefined
+add()
+VM551:2 Uncaught ReferenceError: a is not defined
+    at add (<anonymous>:2:33)
+    at <anonymous>:1:1
+add @ VM551:2
+(anonymous) @ VM584:1
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+    let a=10;
+    console.log("inside if",a)    
+}
+      console.log("at end ",a)  
+}
+
+    
+undefined
+add()
+VM589:5 inside if 10
+VM589:7 Uncaught ReferenceError: a is not defined
+    at add (<anonymous>:7:29)
+    at <anonymous>:1:1
+add @ VM589:7
+(anonymous) @ VM594:1
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+     console.log("inside if before declare",a)
+    let a=10;
+    console.log("inside if",a)    
+}
+     
+}
+
+    
+undefined
+add();
+VM617:4 Uncaught ReferenceError: Cannot access 'a' before initialization
+    at add (<anonymous>:4:45)
+    at <anonymous>:1:1
+add @ VM617:4
+(anonymous) @ VM643:1
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+     // console.log("inside if before declare",a)
+    let a=10;
+    console.log("inside if",a) 
+    let a=10000;
+}
+     
+}
+
+    
+VM695:7 Uncaught SyntaxError: Identifier 'a' has already been declared
+function add(){
+        // console.log("at start ",a)
+if(10>2){
+     // console.log("inside if before declare",a)
+    const a=10;
+    console.log("inside if",a) 
+ 
+}
+     
+}
+
+    
+undefined
+const a=1000;
+undefined
+a=''
+VM750:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:2
+(anonymous) @ VM750:1
