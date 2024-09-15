@@ -1,0 +1,55 @@
+function add(){
+ if(10>2){
+     console.log(a);
+     if(3>1){
+         for(var i=0;i<10;i++){
+             
+         }
+     }
+ }
+    
+}
+undefined
+add()
+VM190:3 Uncaught ReferenceError: a is not defined
+    at add (<anonymous>:3:18)
+    at <anonymous>:1:1
+add @ VM190:3
+(anonymous) @ VM209:1
+var a=10000
+undefined
+add()
+VM190:3 10000
+undefined
+function add(){
+ if(10>2){
+     console.log(a);
+     if(3>1){
+         var a=000;
+         for(var i=0;i<10;i++){
+             
+         }
+     }
+ }
+    
+}
+undefined
+add()
+VM261:3 undefined
+undefined
+function add(){
+ if(10>2){
+     console.log(a);
+     if(3>1){
+         const a=000;
+         for(var i=0;i<10;i++){
+             
+         }
+     }
+ }
+    
+}
+undefined
+add()
+VM277:3 10000
+undefined

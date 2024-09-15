@@ -1,0 +1,125 @@
+function calc(){
+    let add=function(x,y){
+        return x+y;
+    }
+    let sub=function(x,y){
+        return x-y;
+    }
+    return [add,sub]
+}
+undefined
+calc()
+(2) [ƒ, ƒ]0: ƒ (x,y)1: ƒ (x,y)length: 2[[Prototype]]: Array(0)
+var z=calc()
+undefined
+z[0](10,20)
+30
+z[1](10,20)
+-10
+function calc(){
+    let add=function adder(x,y){
+        return x+y;
+    }
+    let sub=function subtractor(x,y){
+        return x-y;
+    }
+    return [add,sub]
+}
+undefined
+var z=calc()
+undefined
+z
+(2) [ƒ, ƒ]0: ƒ adder(x,y)1: ƒ subtractor(x,y)length: 2[[Prototype]]: Array(0)
+z[1](10,20)
+-10
+z[0](10,20)
+30
+function calc(){
+    let add=function adder(x,y){
+        return x+y;
+    }
+    let sub=function subtractor(x,y){
+        return x-y;
+    }
+    return {add,sub}
+}
+undefined
+var z=calc()
+undefined
+z
+{add: ƒ, sub: ƒ}add: ƒ adder(x,y)sub: ƒ subtractor(x,y)[[Prototype]]: Object
+z.add(10,20)
+30
+z.sub(10,20)
+-10
+ var arrowfn=()=>{
+    console.log("i am add function");
+}
+undefined
+arrowfn()
+VM736:2 i am add function
+undefined
+arrowfn(11)
+VM736:2 i am add function
+undefined
+ var arrowfn=(x)=>{
+    console.log("i am add function",x);
+}
+undefined
+arrowfn(11)
+VM789:2 i am add function 11
+undefined
+ var arrowfn=(x)=>x
+undefined
+arrowfn(121)
+121
+ var arrowfn=x=>x
+undefined
+arrowfn(121)
+121
+ var arrowfn=(x)=>{
+    console.log("i am add function");
+      console.log("i am arrow function");
+     return x;
+}
+undefined
+arrowfn(121)
+VM926:2 i am add function
+VM926:3 i am arrow function
+121
+var factor=4;
+var multiply=(x)=>factor*x;
+undefined
+multiply(2)
+8
+multiply(2)
+8
+multiply(2)
+8
+factor=6
+6
+multiply(2)
+12
+multiply(2)
+12
+
+var multiply=(x)=>x*x;
+undefined
+multiply(2)
+4
+multiply(2)
+4
+multiply(2)
+4
+multiply(2)
+4
+multiply(2)
+4
+multiply(2)
+4
+multiply(2)
+4
+Object
+ƒ Object() { [native code] }
+typeof Object
+'function'

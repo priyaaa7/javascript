@@ -1,0 +1,46 @@
+function loop(fn,n){
+    for(let i=1;i<=n;i++){
+           console.log( fn(i));
+    }
+}
+
+const evenOdd=num=>num%2===0?`even ${num}`:`odd ${num}`;
+const cube=num=>num**3;
+const table=num=>num*6;
+undefined
+loop(evenOdd,10)
+VM362:3 odd 1
+VM362:3 even 2
+VM362:3 odd 3
+VM362:3 even 4
+VM362:3 odd 5
+VM362:3 even 6
+VM362:3 odd 7
+VM362:3 even 8
+VM362:3 odd 9
+VM362:3 even 10
+undefined
+loop(table,10)
+VM362:3 6
+VM362:3 12
+VM362:3 18
+VM362:3 24
+VM362:3 30
+VM362:3 36
+VM362:3 42
+VM362:3 48
+VM362:3 54
+VM362:3 60
+undefined
+loop(cube,10)
+VM362:3 1
+VM362:3 8
+VM362:3 27
+VM362:3 64
+VM362:3 125
+VM362:3 216
+VM362:3 343
+VM362:3 512
+VM362:3 729
+VM362:3 1000
+undefined

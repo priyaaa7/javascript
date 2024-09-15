@@ -1,0 +1,214 @@
+var arr=[13,2,3,345,6,7];
+undefined
+var arr=[1,2,3,3,6,7];
+undefined
+arr.forEach();
+VM74:1 Uncaught TypeError: undefined is not a function
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:5
+(anonymous) @ VM74:1
+function printIt(ele){
+    console.log(ele);
+}
+arr.forEach(printIt);
+VM201:2 1
+VM201:2 2
+VM201:2 3
+VM201:2 3
+VM201:2 6
+VM201:2 7
+undefined
+arr.forEach(ele=>console.log(ele));
+VM308:1 1
+VM308:1 2
+VM308:1 3
+VM308:1 3
+VM308:1 6
+VM308:1 7
+undefined
+var fn=(e)=>e
+undefined
+fn()
+undefined
+fn(2)
+2
+f()
+var f=(e)=>e
+VM393:1 Uncaught TypeError: f is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM393:1
+arr.forEach(ele=>ele);
+undefined
+arr.find(e=>e===3);
+3
+arr.find(element=>element===3);
+3
+arr.find(element=>element===30);
+undefined
+arr.findIndex(element=>element===3);
+2
+arr.findIndex(element=>element===30);
+-1
+var arr=[100,200,300,400,500]
+undefined
+arr.find(element=>element===300);
+300
+arr.findIndex(element=>element===300);
+2
+arr.find(element=>element>300);
+400
+arr.findIndex(element=>element>300);
+3
+arr.filter(ele=>ele>200)
+(3) [300, 400, 500]0: 3001: 4002: 500length: 3[[Prototype]]: Array(0)
+arr.filter(ele=>ele>2000)
+[]length: 0[[Prototype]]: Array(0)
+arr.map(ele=>ele>100)
+(5) [false, true, true, true, true]
+arr.map(ele=>ele+1000)
+(5) [1100, 1200, 1300, 1400, 1500]
+var prices=[100,2000,30000,4532,1232]
+undefined
+var pricesWithGST=prices.map(ele>ele+ele*0.18)
+VM1025:1 Uncaught ReferenceError: ele is not defined
+    at <anonymous>:1:30
+(anonymous) @ VM1025:1
+var pricesWithGST=prices.map(ele=>ele+ele*0.18)
+undefined
+ pricesWithGST
+(5) [118, 2360, 35400, 5347.76, 1453.76]
+prices
+(5) [100, 2000, 30000, 4532, 1232]
+var a= arr.filter(ele=>ele>200)
+undefined
+a
+(3) [300, 400, 500]
+a.pop()
+500
+a
+(2) [300, 400]
+arr
+(5) [100, 200, 300, 400, 500]
+arr.sort()
+(5) [100, 200, 300, 400, 500]
+arr=[723,8296,187,19,28,533]
+(6) [723, 8296, 187, 19, 28, 533]
+arr.sort()
+(6) [187, 19, 28, 533, 723, 8296]
+arr.sort((first,second)=>first-second)
+(6) [19, 28, 187, 533, 723, 8296]
+arr.sort((first,second)=>second-first)
+(6) [8296, 723, 533, 187, 28, 19]
+arr2=['priya','yash','aman','varun','yashasvi']
+(5) ['priya', 'yash', 'aman', 'varun', 'yashasvi']
+'priya'-'aman'
+NaN
+'priya'.localeCompare('aman')
+1
+'priya'.localeCompare('priya')
+0
+'aman'.localeCompare('priya')
+-1
+arr2.sort((first,second)=>first.localeCompare(second))
+(5) ['aman', 'priya', 'varun', 'yash', 'yashasvi']
+arr2.sort((first,second)=>second.localeCompare(first))
+(5) ['yashasvi', 'yash', 'varun', 'priya', 'aman']
+var result= arr2.sort((first,second)=>second.localeCompare(first))
+undefined
+result
+(5) ['yashasvi', 'yash', 'varun', 'priya', 'aman']
+arr2
+(5) ['yashasvi', 'yash', 'varun', 'priya', 'aman']
+arr2.pop()
+'aman'
+arr2
+(4) ['yashasvi', 'yash', 'varun', 'priya']
+result
+(4) ['yashasvi', 'yash', 'varun', 'priya']
+arr
+(6) [8296, 723, 533, 187, 28, 19]
+arr.push(1111)
+7
+arr
+(7) [8296, 723, 533, 187, 28, 19, 1111]
+arr.shift()
+8296
+arr
+(6) [723, 533, 187, 28, 19, 1111]
+arr.unshift(11111111111)
+7
+arr
+(7) [11111111111, 723, 533, 187, 28, 19, 1111]
+arr.splice(1)
+(6) [723, 533, 187, 28, 19, 1111]
+arr
+[11111111111]
+arr=[723,8296,187,19,28,533]
+(6) [723, 8296, 187, 19, 28, 533]
+arr.splice(2,1);
+[187]
+arr
+(5) [723, 8296, 19, 28, 533]
+arr.splice(2,1,11111);
+[19]
+arr
+(5) [723, 8296, 11111, 28, 533]
+arr.splice(2,0,22222222222);
+[]
+arr
+(6) [723, 8296, 22222222222, 11111, 28, 533]
+arr
+(6) [723, 8296, 22222222222, 11111, 28, 533]
+arr.reduce((sum,ele)=>console.log('sum is ',sum,'ele is ',ele))
+VM2631:1 sum is  723 ele is  8296
+VM2631:1 sum is  undefined ele is  22222222222
+VM2631:1 sum is  undefined ele is  11111
+VM2631:1 sum is  undefined ele is  28
+VM2631:1 sum is  undefined ele is  533
+undefined
+arr.reduce((sum,ele)=>console.log('sum is ',sum,'ele is ',ele),0)
+VM2641:1 sum is  0 ele is  723
+VM2641:1 sum is  undefined ele is  8296
+VM2641:1 sum is  undefined ele is  22222222222
+VM2641:1 sum is  undefined ele is  11111
+VM2641:1 sum is  undefined ele is  28
+VM2641:1 sum is  undefined ele is  533
+undefined
+arr.reduce((sum,ele)=>console.log('sum is ',sum,'ele is ',ele),'priya')
+VM2655:1 sum is  priya ele is  723
+VM2655:1 sum is  undefined ele is  8296
+VM2655:1 sum is  undefined ele is  22222222222
+VM2655:1 sum is  undefined ele is  11111
+VM2655:1 sum is  undefined ele is  28
+VM2655:1 sum is  undefined ele is  533
+undefined
+arr.reduce((sum,ele)=>{console.log('sum is ',sum,'ele is ',ele)
+                      sum+=ele;
+                       return sum
+                      },0)
+VM2715:1 sum is  0 ele is  723
+VM2715:1 sum is  723 ele is  8296
+VM2715:1 sum is  9019 ele is  22222222222
+VM2715:1 sum is  22222231241 ele is  11111
+VM2715:1 sum is  22222242352 ele is  28
+VM2715:1 sum is  22222242380 ele is  533
+22222242913
+arr.reduce((sum,ele)=>{console.log('sum is ',sum,'ele is ',ele)
+                      sum+=ele;
+                       return sum
+                      },'priya')
+VM2732:1 sum is  priya ele is  723
+VM2732:1 sum is  priya723 ele is  8296
+VM2732:1 sum is  priya7238296 ele is  22222222222
+VM2732:1 sum is  priya723829622222222222 ele is  11111
+VM2732:1 sum is  priya72382962222222222211111 ele is  28
+VM2732:1 sum is  priya7238296222222222221111128 ele is  533
+'priya7238296222222222221111128533'
+arr
+(6) [723, 8296, 22222222222, 11111, 28, 533]
+arr.some(ele=>ele>2000)
+true
+arr.every(ele=>ele>2000)
+false
+arr.every(ele=>ele>2)
+true
