@@ -1,0 +1,198 @@
+var arr=[1,2,3,3,6,8,7];
+undefined
+arr.filter((element)=>{})
+[]length: 0[[Prototype]]: Array(0)
+arr.filter(element=>element)
+(7) [1, 2, 3, 3, 6, 8, 7]
+arr.filter(element=>true)
+(7) [1, 2, 3, 3, 6, 8, 7]
+arr.map(ele=>ele)
+(7) [1, 2, 3, 3, 6, 8, 7]
+arr.map(ele=>true)
+(7) [true, true, true, true, true, true, true]
+function print(a){
+    console.log(a);
+}
+undefined
+arr.forEach(print)
+VM432:2 1
+VM432:2 2
+VM432:2 3
+VM432:2 3
+VM432:2 6
+VM432:2 8
+VM432:2 7
+undefined
+print='printt'
+'printt'
+arr.forEach(print)
+VM556:1 Uncaught TypeError: string "printt" is not a function
+    at Array.forEach (<anonymous>)
+    at <anonymous>:1:5
+(anonymous) @ VM556:1
+function total(num){
+    var sum=0;
+    for(var i=0;i<num;i++){
+    sum+=num;
+}
+    return sum;}
+undefined
+function total(num){
+    let sum=0;
+    for(var i=0;i<=num;i++){
+    sum=sum+i;
+}
+    return sum;}
+undefined
+total(3)
+6
+total(4)
+10
+total(2)
+3
+arr
+(7) [1, 2, 3, 3, 6, 8, 7]
+arr.reduce((sum,element)=>{
+    return sum+element;
+})
+30
+arr.reduce((sum,element)=>{
+    sum+=element;
+    return sum;
+})
+30
+arr.reduce((sum,element)=>{
+    console.log("sum ",sum);
+    console.log("element ",element);
+    sum+=element;
+    return sum;
+})
+VM1185:2 sum  1
+VM1185:3 element  2
+VM1185:2 sum  3
+VM1185:3 element  3
+VM1185:2 sum  6
+VM1185:3 element  3
+VM1185:2 sum  9
+VM1185:3 element  6
+VM1185:2 sum  15
+VM1185:3 element  8
+VM1185:2 sum  23
+VM1185:3 element  7
+30
+console.log('111')
+console.log('222')
+console.log('333')
+VM1297:1 111
+VM1297:2 222
+VM1297:3 333
+undefined
+console.log('111
+console.log('222')
+console.log('333')
+VM1305:1 Uncaught SyntaxError: Invalid or unexpected token
+function doBiggerTask(){
+    for(var i=1;i<100000;i++){
+        for(var j=1;j<100000;j++){}
+    }
+    return "bigger task done";
+}
+undefined
+console.log('first line')
+console.log(doBiggerTask());
+console.log('3rd line')
+VM1564:1 first line
+VM1564:2 bigger task done
+VM1564:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask());
+console.log('3rd line')
+VM1566:1 first line
+VM1566:2 bigger task done
+VM1566:3 3rd line
+undefined
+function doBiggerTask(num){
+    for(var i=1;i<100000;i++){
+        for(var j=1;j<100000;j++){}
+    }
+    return num**3;
+}
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1599:1 first line
+VM1599:2 27
+VM1599:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1601:1 first line
+VM1601:2 27
+VM1601:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1603:1 first line
+VM1603:2 27
+VM1603:3 3rd line
+undefined
+var cache={};
+function doBiggerTask(num){
+    if(cache[num]){
+       return cache[num]; 
+    }
+    for(var i=1;i<100000;i++){
+        for(var j=1;j<100000;j++){}
+    }
+    cache[num]=num**3;
+    return  cache[num] ;
+}
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1701:1 first line
+VM1701:2 27
+VM1701:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1703:1 first line
+VM1703:2 27
+VM1703:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1705:1 first line
+VM1705:2 27
+VM1705:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(3));
+console.log('3rd line')
+VM1707:1 first line
+VM1707:2 27
+VM1707:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(5));
+console.log('3rd line')
+VM1716:1 first line
+VM1716:2 125
+VM1716:3 3rd line
+undefined
+console.log('first line')
+console.log(doBiggerTask(5));
+console.log('3rd line')
+VM1718:1 first line
+VM1718:2 125
+VM1718:3 3rd line
+undefined
+cache
+{3: 27, 5: 125}3: 275: 125[[Prototype]]: Object
