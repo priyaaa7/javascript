@@ -1,0 +1,25 @@
+function doWork(num){
+var p= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        if(num>10){
+            reject('cant compute');
+        }
+        resolve(num**2);
+    },4000);
+});
+    return p;
+}
+undefined
+doWork(4);
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: 16
+doWork(5).then(data=>console.log(data)).catch(error=>console.log(error));
+Promise {<pending>}
+VM894:1 25
+doWork(50).then(data=>console.log(data)).catch(error=>console.log(error));
+Promise {<pending>}
+VM901:1 cant compute
+doWork(50).then(data=>console.log(data))
+Promise {<pending>}
+about:blank:1 Uncaught (in promise) cant compute
+Promise.then
+(anonymous) @ VM949:1

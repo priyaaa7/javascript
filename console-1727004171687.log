@@ -1,0 +1,214 @@
+function countLikes(){
+    var count=0;
+    count++;
+    return count;
+}
+undefined
+countLikes();
+1
+countLikes();
+1
+countLikes();
+1
+countLikes();
+1
+ var count=0;
+function countLikes(){
+    count++;
+    return count;
+}
+undefined
+countLikes();
+1
+countLikes();
+2
+countLikes();
+3
+countLikes();
+4
+countLikes();
+5
+count=100
+100
+countLikes();
+101
+function init(){
+let count=0;
+var countLikes= function (){
+    count++;
+    return count;
+}
+    return countLikes;
+}
+undefined
+var c=init()
+undefined
+c();
+1
+c();
+2
+c();
+3
+c();
+4
+c();
+5
+c();
+6
+c();
+7
+var fn= (function (){
+let count=0;
+var countLikes= function (){
+    count++;
+    return count;
+}
+    return countLikes;
+})();
+undefined
+fn()
+1
+fn()
+2
+fn()
+3
+fn()
+4
+fn()
+5
+function init(){
+let count=0;
+var countLikes= function (){
+    count++;
+    return count;
+}
+    return countLikes;
+}
+undefined
+var c=init()
+undefined
+c();
+1
+c();
+2
+c();
+3
+var c=init();
+undefined
+c();
+1
+c();
+2
+c();
+3
+var fn= (function (){
+let count=0;
+var countLikes= function (){
+    count++;
+    return count;
+}
+    return countLikes;
+})();
+undefined
+fn()
+1
+fn()
+2
+fn()
+3
+fn()
+4
+fn()
+5
+fn()
+6
+function loop(){
+           console.log('i is ',i);
+    function show(){
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    }
+}
+undefined
+loop()
+VM754:2 Uncaught ReferenceError: i is not defined
+    at loop (<anonymous>:2:32)
+    at <anonymous>:1:1
+loop @ VM754:2
+(anonymous) @ VM771:1
+function loop(){
+           console.log('i is ',i);
+    if(10>3){
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    }
+}
+undefined
+loop()
+VM874:2 i is  undefined
+VM874:5 i is  0
+VM874:5 i is  1
+VM874:5 i is  2
+VM874:5 i is  3
+undefined
+function loop(){
+           console.log('i is ',i);
+    (function() {
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    })();
+}
+undefined
+loop()
+VM913:2 Uncaught ReferenceError: i is not defined
+    at loop (<anonymous>:2:32)
+    at <anonymous>:1:1
+loop @ VM913:2
+(anonymous) @ VM918:1
+function loop(){
+           // console.log('i is ',i);
+    (function() {
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    })();
+}
+undefined
+loop()
+VM923:5 i is  0
+VM923:5 i is  1
+VM923:5 i is  2
+VM923:5 i is  3
+undefined
+function loop(){
+           console.log('!!!!!!!!!!!!start ');
+    (function() {
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    })();
+     console.log('!!!!!!!!!!!!end ');
+}
+undefined
+loop()
+VM972:2 !!!!!!!!!!!!start 
+VM972:5 i is  0
+VM972:5 i is  1
+VM972:5 i is  2
+VM972:5 i is  3
+VM972:8 !!!!!!!!!!!!end 
+undefined
+function loop(){
+          
+    function show(){
+        for(var i=0;i<=3;i++){
+            console.log('i is ',i);
+        }
+    }
+}
+undefined
+loop()
+undefined
