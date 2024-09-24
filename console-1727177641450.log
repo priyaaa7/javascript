@@ -1,0 +1,67 @@
+function payment(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("payment info :-");
+        },5000);
+    });
+    return pr;
+}
+
+function delInfo(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("delivery info :-");
+        },5000);
+    });
+    return pr;
+}
+
+function tracking(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("tracking info is ");
+        },6000);
+    });
+    return pr;
+}
+undefined
+var p= payment();
+undefined
+p
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+var paymentpromise= payment();
+paymentpromise.then(()=>{
+    console.log('payment done');
+    var deliveryPromise=delInfo();
+    deliveryPromise.then(()=>{
+          console.log('delivery initiated');
+        var trackingPromise= tracking();
+        trackingPromise.then(()=>{
+            console.log('tracking done');
+        }).catch(error=>console.log(error));
+    }).catch(error=>console.log(error));
+}).catch(error=>console.log(error));
+Promise {<pending>}
+VM667:3 payment done
+VM667:6 delivery initiated
+VM667:9 tracking done
+console.log('1st line');
+var paymentpromise= payment();
+paymentpromise.then(()=>{
+    console.log('payment done');
+    var deliveryPromise=delInfo();
+    deliveryPromise.then(()=>{
+          console.log('delivery initiated');
+        var trackingPromise= tracking();
+        trackingPromise.then(()=>{
+            console.log('tracking done');
+        }).catch(error=>console.log(error));
+    }).catch(error=>console.log(error));
+}).catch(error=>console.log(error));
+console.log('last line');
+VM721:1 1st line
+VM721:14 last line
+undefined
+VM721:4 payment done
+VM721:7 delivery initiated
+VM721:10 tracking done

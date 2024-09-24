@@ -1,0 +1,169 @@
+function payment(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("payment info :-");
+        },5000);
+    });
+    return pr;
+}
+
+function delInfo(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("delivery info :-");
+        },5000);
+    });
+    return pr;
+}
+
+function tracking(){
+    var pr= new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve("tracking info is ");
+        },6000);
+    });
+    return pr;
+}
+undefined
+async function orderProcess(){
+    const isPaymentDone=await payment();
+    console.log('payment done',isPaymentDone);
+    const d=await delInfo();
+    console.log('delivery done');
+    const t = await tracking();
+    console.log('tracking done');
+}
+undefined
+var promise= orderProcess();
+undefined
+promise
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+VM295:3 payment done payment info :-
+VM295:5 delivery done
+VM295:7 tracking done
+async function orderProcess(){
+    try{
+    const isPaymentDone=await payment();
+    console.log('payment done',isPaymentDone);
+    const d=await delInfo();
+    console.log('delivery done');
+    const t = await tracking();
+    console.log('tracking done');
+}
+catch(err){error=>console.log(error)};
+}
+undefined
+var promise= orderProcess();
+undefined
+promise
+Promise {<pending>}
+VM387:4 payment done payment info :-
+VM387:6 delivery done
+VM387:8 tracking done
+function cube(num,time){
+    console.log('start');
+    var promise= new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res(num**3);
+        },time);
+    });
+    return promise;
+}
+undefined
+async function total(){
+    let sum = await cube(3,3000)+ await cube(4,2000)+ await cube(6,7000);
+    console.log('sum is ',sum);
+    return sum;
+}
+undefined
+var e= total();
+VM622:2 start
+undefined
+e
+Promise {<pending>}
+VM622:2 start
+VM622:2 start
+VM889:3 sum is  307
+console.log('1st line');
+console.log( total());
+console.log('3rd line');
+VM1025:1 1st line
+VM622:2 start
+VM1025:2 Promise {<pending>}
+VM1025:3 3rd line
+undefined
+VM622:2 start
+VM622:2 start
+VM889:3 sum is  307
+async function total(){
+    let sum = await cube(3,6000)+ await cube(4,5000)+ await cube(6,7000);
+    console.log('sum is ',sum);
+    return sum;
+}
+undefined
+console.log('1st line');
+console.log( total());
+console.log('3rd line');
+VM1044:1 1st line
+VM622:2 start
+VM1044:2 Promise {<pending>}
+VM1044:3 3rd line
+undefined
+VM622:2 start
+VM622:2 start
+VM1041:3 sum is  307
+function cube(num,time){
+    console.log('start and num ',num);
+    var promise= new Promise((res,rej)=>{
+        setTimeout(()=>{
+            res(num**3);
+        },time);
+    });
+    return promise;
+}
+undefined
+console.log('1st line');
+console.log( total());
+console.log('3rd line');
+VM1094:1 1st line
+VM1091:2 start and num  3
+VM1094:2 Promise {<pending>}
+VM1094:3 3rd line
+undefined
+VM1091:2 start and num  4
+VM1091:2 start and num  6
+async function total(){
+    let sum = await cube(3,6000)+ await cube(4,5000)+ await cube(6,7000);
+    console.log('sum is ',sum);
+    return sum;
+}
+undefined
+VM1041:3 sum is  307
+console.log('1st line');
+console.log( total());
+console.log('3rd line');
+VM1102:1 1st line
+VM1091:2 start and num  3
+VM1102:2 Promise {<pending>}
+VM1102:3 3rd line
+undefined
+VM1091:2 start and num  4
+VM1091:2 start and num  6
+VM1099:3 sum is  307
+async function total(){
+    let sum = await cube(8,6000)+ await cube(4,5000)+ await cube(6,7000);
+    console.log('sum is ',sum);
+    return sum;
+}
+undefined
+console.log('1st line');
+console.log( total());
+console.log('3rd line');
+VM1139:1 1st line
+VM1091:2 start and num  8
+VM1139:2 Promise {<pending>}
+VM1139:3 3rd line
+undefined
+VM1091:2 start and num  4
+VM1091:2 start and num  6
+VM1136:3 sum is  792

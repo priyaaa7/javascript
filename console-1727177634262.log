@@ -1,0 +1,66 @@
+function doWork(num){
+var p= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        if(num>10){
+            reject('cant compute');
+        }
+        resolve(num**2);
+    },4000);
+});
+    return p;
+}
+undefined
+var r=doWork(3);
+undefined
+r
+Promise {<pending>}
+r
+Promise {<fulfilled>: 9}
+var r= Promise.all([doWork(2),doWork(6),doWork(5)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+VM476:2 (3) [4, 36, 25]
+var r= Promise.all([doWork(2),doWork(6),doWork(50)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM483:2 cant compute
+var r= Promise.allSettled([doWork(2),doWork(6),doWork(50)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM495:2 (3) [{…}, {…}, {…}]0: {status: 'fulfilled', value: 4}1: {status: 'fulfilled', value: 36}2: {status: 'rejected', reason: 'cant compute'}length: 3[[Prototype]]: Array(0)
+function doWork(num,t){
+var p= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        if(num>10){
+            reject('cant compute');
+        }
+        resolve(num**2);
+    },t);
+});
+    return p;
+}
+undefined
+var r= Promise.race([doWork(2,4000),doWork(6,2000),doWork(50,3000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM616:2 36
+var r= Promise.race([doWork(2,4000),doWork(60,2000),doWork(50,3000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM624:2 cant compute
+var r= Promise.any([doWork(2,4000),doWork(60,2000),doWork(50,3000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM639:2 4
+var r= Promise.any([doWork(2,5000),doWork(60,2000),doWork(50,3000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM652:2 4
+var r= Promise.any([doWork(20,5000),doWork(60,2000),doWork(5,3000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM667:2 25
+var r= Promise.any([doWork(20,5000),doWork(60,2000),doWork(5,7000)]);
+r.then(result=>console.log(result)).catch(err=>console.log(err));
+Promise {<pending>}
+VM675:2 25
