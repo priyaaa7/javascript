@@ -1,0 +1,123 @@
+var obj={name:'priya',lastname:'sharma',department:'IT'}
+undefined
+typeof obj
+'object'
+obj instanceof Object
+true
+function createCustomer(){
+    var customer={};
+    customer.id=1001;
+    customer.name="priya";
+    customer.balance=2723221;
+    return customer;
+}
+undefined
+var priya = createCustomer()
+undefined
+priya
+{id: 1001, name: 'priya', balance: 2723221}
+function createCustomer(id,name,balance){
+    var customer={};
+    customer.id=id;
+    customer.name=name;
+    customer.balance=balance;
+    return customer;
+}
+undefined
+var neha = createCustomer(1002,"neha",10000)
+undefined
+neha
+{id: 1002, name: 'neha', balance: 10000}
+typeof neha
+'object'
+neha instanceof Object
+true
+function createCustomer(id,name,balance){
+   
+    customer.id=id;
+    customer.name=name;
+    customer.balance=balance;
+    return customer;
+}
+undefined
+var neha =new createCustomer(1002,"neha",10000)
+VM647:3 Uncaught ReferenceError: customer is not defined
+    at new createCustomer (<anonymous>:3:5)
+    at <anonymous>:1:11
+createCustomer @ VM647:3
+(anonymous) @ VM664:1
+function createCustomer(id,name,balance){
+   //this-- holds the reference
+    this.id=id;
+    this.name=name;
+    this.balance=balance;
+}
+undefined
+var neha =new createCustomer(1002,"neha",10000)
+undefined
+neha
+createCustomer {id: 1002, name: 'neha', balance: 10000}
+neha instanceof createCustomer
+true
+neha instanceof Object
+true
+function createCustomer(id,name,balance){
+   //this-- holds the reference
+    this.id=id;
+    this.name=name;
+    this.balance=balance;
+    this.print=function(){
+        console.log(`id ${this.id} Name ${this.name} balance ${this.balance}`)
+    }
+}
+undefined
+var neha =new createCustomer(1002,"neha",10000)
+undefined
+neha
+createCustomer {id: 1002, name: 'neha', balance: 10000, print: ƒ}balance: 10000id: 1002name: "neha"print: ƒ ()[[Prototype]]: Object
+neha.print
+ƒ (){
+        console.log(`id ${this.id} Name ${this.name} balance ${this.balance}`)
+    }
+neha.print()
+VM1090:7 id 1002 Name neha balance 10000
+undefined
+var yash =new createCustomer(1006,"yash",372842)
+undefined
+yash
+createCustomer {id: 1006, name: 'yash', balance: 372842, print: ƒ}balance: 372842id: 1006name: "yash"print: ƒ ()[[Prototype]]: Object
+yash.print()
+VM1090:7 id 1006 Name yash balance 372842
+undefined
+console.dir(createCustomer)
+VM1325:1 ƒ createCustomer(id,name,balance)arguments: nullcaller: nulllength: 3name: "createCustomer"prototype: {}constructor: ƒ createCustomer(id,name,balance)[[Prototype]]: Object[[FunctionLocation]]: VM1090:1[[Prototype]]: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()[[FunctionLocation]]: [[Prototype]]: Object[[Scopes]]: Scopes[0][[Scopes]]: Scopes[1]
+undefined
+typeof Object
+'function'
+typeof Array
+'function'
+function createCustomer(id,name,balance){
+   //this-- holds the reference
+    this.id=id;
+    this.name=name;
+    this.balance=balance;
+}
+
+undefined
+typeof createCustomer.prototype
+'object'
+ createCustomer.prototype instanceof Object
+true
+ createCustomer.prototype.print= function(){
+        console.log(`id ${this.id} Name ${this.name} balance ${this.balance}`)
+    }
+ƒ (){
+        console.log(`id ${this.id} Name ${this.name} balance ${this.balance}`)
+    }
+var yash =new createCustomer(1006,"yash",372842)
+undefined
+yash
+createCustomer {id: 1006, name: 'yash', balance: 372842}balance: 372842id: 1006name: "yash"[[Prototype]]: Object
+yash.print()
+VM1585:2 id 1006 Name yash balance 372842
+undefined
