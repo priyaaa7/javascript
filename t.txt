@@ -1,0 +1,16 @@
+ASSIGNMENT
+
+create a type called Employee
+having id,name , basic salary
+
+compute HRA, DA, TA , GS, NS
+
+HRA 30% of basic salary
+DA 10% of basic salary
+TA 20% of basic salary
+GS =basic salary +HRA+DA+TA
+
+TAX =10% of GS
+NS=GS-TAX
+
+print salary slip of Employee

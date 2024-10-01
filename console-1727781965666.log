@@ -1,0 +1,38 @@
+function show(){
+    console.log('result received')
+}
+undefined
+show
+ƒ show(){
+    console.log('result received')
+}
+show()
+VM1052:2 result received
+undefined
+window.show()
+VM1052:2 result received
+undefined
+function show(){
+    console.log('result received',this)
+}
+undefined
+window.show()
+VM1161:2 result received Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+show()
+VM1161:2 result received Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+var obj={
+    x:10,y:20,
+    // display:function(){}
+    //ES6 shorthand 
+    display(){
+        console.log(this.x+this.y);
+    }
+}
+undefined
+obj
+{x: 10, y: 20, display: ƒ}display: ƒ display()x: 10y: 20[[Prototype]]: Object
+obj.display()
+VM1358:6 30
+undefined

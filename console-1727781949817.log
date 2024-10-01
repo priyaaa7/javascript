@@ -1,0 +1,59 @@
+function Student(id,name,marks){
+    this.id=id;
+    this.name=name;
+    this.marks=marks;
+}
+undefined
+typeof Student.prototype
+'object'
+Student.prototype.printDetails=function(){
+    console.log(`id is ${this.id} name is ${this.name} marks is ${this.marks}`)
+}
+ƒ (){
+    console.log(`id is ${this.id} name is ${this.name} marks is ${this.marks}`)
+}
+var anmol =new Student(1001,'anmol',100)
+undefined
+anmol
+Student {id: 1001, name: 'anmol', marks: 100}id: 1001marks: 100name: "anmol"[[Prototype]]: Object
+var abhishek =new Student(1002,'abhishek',110)
+undefined
+abhishek
+Student {id: 1002, name: 'abhishek', marks: 110}
+abhishek.printDetails()
+VM886:2 id is 1002 name is abhishek marks is 110
+undefined
+anmol.printDetails()
+VM886:2 id is 1001 name is anmol marks is 100
+undefined
+anmol.__proto__===Student.prototype
+true
+abhishek.__proto__===Student.prototype
+true
+abhishek.__proto__===anmol.__proto__
+true
+Student.prototype.__proto__===Object.prototype
+true
+Object.prototype.__proto__
+null
+anmol.__proto__.__proto__=Object.prototype
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+anmol.__proto__.__proto__===Object.prototype
+true
+abhishek
+Student {id: 1002, name: 'abhishek', marks: 110}id: 1002marks: 110name: "abhishek"[[Prototype]]: Object
+Student
+ƒ Student(id,name,marks){
+    this.id=id;
+    this.name=name;
+    this.marks=marks;
+}
+console.dir(Student)
+VM1651:1 ƒ Student(id,name,marks)arguments: nullcaller: nulllength: 3name: "Student"prototype: {printDetails: ƒ}printDetails: ƒ ()constructor: ƒ Student(id,name,marks)[[Prototype]]: Object[[FunctionLocation]]: VM656:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+anmol
+Student {id: 1001, name: 'anmol', marks: 100}
+var obj={name:'priya',lastname:'sharma',department:'IT'}
+undefined
+obj
+{name: 'priya', lastname: 'sharma', department: 'IT'}
