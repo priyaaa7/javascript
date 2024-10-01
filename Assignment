@@ -1,0 +1,49 @@
+// Constructor function
+function Employee(id, name, basicSalary, hra, da, ta, gs, tax, ns) {
+    this.id = id;
+    this.name = name;
+    this.basicSalary = basicSalary;
+    this.hra = hra;
+    this.da = da;
+    this.ta = ta;
+    this.gs = gs;
+    this.tax = tax;
+    this.ns = ns;
+}
+
+// To calculate the salary
+Employee.prototype.calculateSalary = function() {
+    this.hra = 0.30 * this.basicSalary;
+    this.da = 0.10 * this.basicSalary;
+    this.ta = 0.20 * this.basicSalary;
+    this.gs = this.basicSalary + this.hra + this.da + this.ta;
+    this.tax = 0.10 * this.gs;
+    this.ns = this.gs - this.tax;
+    if(this.gs > 40000 ){
+        alert(`Good job keep it up ${this.name}  your net salary is ${this.ns}`)
+    }
+};
+
+// To print the salary slip
+Employee.prototype.printSalarySlip = function() {
+    console.log(`Salary Slip for Employee: Name : ${this.name} , ID : ${this.id}`);
+    console.log(`Basic Salary: ${this.basicSalary}`);
+    console.log(`HRA: ${this.hra}`);
+    console.log(`DA: ${this.da}`);
+    console.log(`TA: ${this.ta}`);
+    console.log(`Gross Salary (GS): ${this.gs}`);
+    console.log(`Tax: ${this.tax}`);
+    console.log(`Net Salary (NS): ${this.ns}`);
+};
+
+let employee = new Employee(1, "Abhi", 40000);
+
+
+employee.calculateSalary();
+employee.printSalarySlip();
+
+
+
+
+// if we create multiple employee then we have to map them in an array and use for Each loop to print them to avoid calling employee.calculateSalary();
+employee.printSalarySlip(); each time.
